@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PatchWork</string>
+    <string name="choose_one_and_use">Choose one and use</string>
+    <string name="user_info">User info</string>
+    <string name="graphic_image">graphic image</string>
+    <string name="yellow">yellow</string>
+    <string name="blue">blue</string>
+    <string name="green">green</string>
 </resources>

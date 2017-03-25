@@ -6,6 +6,63 @@
     android:layout_height="match_parent"
     tools:context="com.example.ivos.patchwork.MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/user_info"
+        android:text="@string/choose_one_and_use"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintLeft_toLeftOf="@+id/choose_color_layout"
+        app:layout_constraintRight_toRightOf="@+id/choose_color_layout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/choose_color_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/main_linearLayout"
+        app:layout_constraintRight_toRightOf="@+id/main_linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="@string/green"
+            android:onClick="changePatchColor"
+            app:srcCompat="@drawable/green" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="@string/blue"
+            android:onClick="changePatchColor"
+            app:srcCompat="@drawable/blue" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:tag="@string/yellow"
+            android:onClick="changePatchColor"
+            app:srcCompat="@drawable/yellow" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/main_linearLayout"
@@ -16,176 +73,160 @@
         android:layout_marginLeft="48dp"
         android:layout_marginRight="48dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/choose_color_layout">
 
+        <LinearLayout style="@style/patchColumn">
 
+            <ImageView
+                android:id="@+id/I11"
+                style="@style/patchSquareImage"
+                android:tag="I11" />
 
-        <LinearLayout
-            style="@style/patchColumn">
+            <ImageView
+                android:id="@+id/I12"
+                style="@style/patchSquareImage"
+                android:tag="I12" />
 
+            <ImageView
+                android:id="@+id/I13"
+                style="@style/patchSquareImage"
+                android:tag="I13" />
 
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I14"
+                style="@style/patchSquareImage"
+                android:tag="I14" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/patchColumn">
-
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I15"
+                style="@style/patchSquareImage"
+                android:tag="I15" />
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/patchColumn">
+        <LinearLayout style="@style/patchColumn">
 
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I21"
+                style="@style/patchSquareImage"
+                android:tag="I21" />
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/I22"
+                style="@style/patchSquareImage"
+                android:tag="I22" />
 
-        <LinearLayout
-            style="@style/patchColumn">
+            <ImageView
+                android:id="@+id/I23"
+                style="@style/patchSquareImage"
+                android:tag="I23" />
 
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I24"
+                style="@style/patchSquareImage"
+                android:tag="I24" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/patchColumn">
-
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I25"
+                style="@style/patchSquareImage"
+                android:tag="I25" />
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/patchColumn">
+        <LinearLayout style="@style/patchColumn">
 
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I31"
+                style="@style/patchSquareImage"
+                android:tag="I31" />
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/I32"
+                style="@style/patchSquareImage"
+                android:tag="I32" />
 
-        <LinearLayout
-            style="@style/patchColumn">
+            <ImageView
+                android:id="@+id/I33"
+                style="@style/patchSquareImage"
+                android:tag="I33" />
 
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I34"
+                style="@style/patchSquareImage"
+                android:tag="I34" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/patchColumn">
-
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I35"
+                style="@style/patchSquareImage"
+                android:tag="I35" />
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/patchColumn">
+        <LinearLayout style="@style/patchColumn">
 
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I41"
+                style="@style/patchSquareImage"
+                android:tag="I41" />
+
+            <ImageView
+                android:id="@+id/I42"
+                style="@style/patchSquareImage"
+                android:tag="I42" />
+
+            <ImageView
+                android:id="@+id/I43"
+                style="@style/patchSquareImage"
+                android:tag="I43" />
+
+            <ImageView
+                android:id="@+id/I44"
+                style="@style/patchSquareImage"
+                android:tag="I44" />
+
+            <ImageView
+                android:id="@+id/I45"
+                style="@style/patchSquareImage"
+                android:tag="I45" />
 
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/patchColumn">
+        <LinearLayout style="@style/patchColumn">
 
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
-            <ImageView style="@style/patchSquareImage" />
+            <ImageView
+                android:id="@+id/I51"
+                style="@style/patchSquareImage"
+                android:tag="I51" />
+
+            <ImageView
+                android:id="@+id/I52"
+                style="@style/patchSquareImage"
+                android:tag="I52" />
+
+            <ImageView
+                android:id="@+id/I53"
+                style="@style/patchSquareImage"
+                android:tag="I53" />
+
+            <ImageView
+                android:id="@+id/I54"
+                style="@style/patchSquareImage"
+                android:tag="I54" />
+
+            <ImageView
+                android:id="@+id/I55"
+                style="@style/patchSquareImage"
+                android:tag="I55" />
 
         </LinearLayout>
-
-
-
-
-
-
-
-
 
     </LinearLayout>
-
 
 </android.support.constraint.ConstraintLayout>
