@@ -30,7 +30,7 @@
         <LinearLayout
             style="@style/patchColumn">
 
-            <ImageView style="@style/patchSquareImage" />
+
             <ImageView style="@style/patchSquareImage" />
             <ImageView style="@style/patchSquareImage" />
             <ImageView style="@style/patchSquareImage" />
