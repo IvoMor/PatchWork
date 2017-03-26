@@ -564,7 +564,7 @@
             <ImageView
                 android:id="@+id/I100"
                 style="@style/patchSquareImage"
-                android:tag="I10" />
+                android:tag="I100" />
 
         </LinearLayout>
 
